@@ -17,6 +17,7 @@
 #############################################################################
 #
 # Original Author: Zbigniew CHAMSKI, Thales Silicon Security
+# Modified by: Renati Tuerhong renati0423@gmail.com
 #
 #############################################################################
 
@@ -48,8 +49,10 @@ GCC_CONFIGURE_OPTS="\
 	--enable-languages=c \
 	--disable-libssp \
 	--disable-libgomp \
-	--disable-libmudflap"
-
+	--disable-libmudflap
+	--with-arch=rv64gc \
+        --with-abi=lp64d \
+        --enable-multilib"
 # newlib
 NEWLIB_DIR=src/newlib
 NEWLIB_REPO=https://sourceware.org/git/newlib-cygwin.git
